@@ -189,6 +189,7 @@
             this.CalculateBMIButton.TabIndex = 12;
             this.CalculateBMIButton.Text = "Calculate";
             this.CalculateBMIButton.UseVisualStyleBackColor = true;
+            this.CalculateBMIButton.Click += new System.EventHandler(this.CalculateBMIButton_Click);
             // 
             // PrintMessageButton
             // 
@@ -205,8 +206,9 @@
             this.ClearFormButton.Name = "ClearFormButton";
             this.ClearFormButton.Size = new System.Drawing.Size(88, 32);
             this.ClearFormButton.TabIndex = 14;
-            this.ClearFormButton.Text = "Clear";
+            this.ClearFormButton.Text = "Next";
             this.ClearFormButton.UseVisualStyleBackColor = true;
+            this.ClearFormButton.Click += new System.EventHandler(this.ClearFormButton_Click);
             // 
             // MailOrder
             // 

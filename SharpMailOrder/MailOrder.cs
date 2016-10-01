@@ -39,8 +39,8 @@ namespace SharpMailOrder
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            // it checks if input integer value is not greater then 150
-            if (Convert.ToInt32(hoursWorkedTextBox.Text) > 150)
+            // it checks if input integer value is not greater then 160
+            if (Convert.ToInt32(hoursWorkedTextBox.Text) > 160)
             {
                 MessageBox.Show("Please provide valid number only smaller then 150");
                 
@@ -65,6 +65,23 @@ namespace SharpMailOrder
         private void EmployeeIDtextBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void CalculateBMIButton_Click(object sender, EventArgs e)
+        {
+
+            var hoursWorkedPercentage = Convert.ToInt32(hoursWorkedTextBox.Text) / 160;
+            var totalBonusAmount = Convert.ToInt32(TotalSalesTextBox.Text) * 0.02;
+            var salesBonus = hoursWorkedPercentage * totalBonusAmount;
+            SalesBonusTextBox.Text = Convert.ToString( salesBonus);
+        }
+
+        private void ClearFormButton_Click(object sender, EventArgs e)
+        {
+            EmployeeNametextBox.Text = String.Empty;
+            EmployeeIDtextBox.Text = String.Empty;
+           // hoursWorkedTextBox.Text = String.Empty;
+            SalesBonusTextBox.Text = String.Empty;
         }
     }
 }
